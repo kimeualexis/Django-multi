@@ -1,0 +1,20 @@
+{% extends 'codecat/_base.html' %}
+
+{% block body %}
+<div class="row">
+
+<center>
+<div class="col-md-4 col-md-offset-4">
+<div class="page-header">
+    <h2 class="text-primary">Sign Up</h2>
+</div>
+
+  <p class="lead">Create an Account As...</p>
+  <a href="{% url 'student_signup' %}" class="btn btn-success btn-lg" role="button">Student</a>
+  <a href="{% url 'instructor_signup' %}" class="btn btn-danger btn-lg" role="button">Instructor</a>
+
+</div>
+    </center>
+</div>
+
+{% endblock %}
