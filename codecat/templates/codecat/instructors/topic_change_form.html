@@ -1,0 +1,72 @@
+{% extends 'codecat/_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block body %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'instructors:topic_change_list' %}">My Topics</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ topic.name }}</li>
+    </ol>
+  </nav>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <h2 class="mb-3">
+    {{ topic.name }}
+    <a href="{% url 'instructors:topic_results' topic.pk %}" class="btn btn-outline-warning float-right">View results</a>
+  </h2>
+  </div>
+
+  <div class="panel-body">
+  <div class="row mb-3">
+    <div class="col-md-6 col-sm-8 col-12">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Update</button>
+        <a href="{% url 'instructors:topic_change_list' %}" class="btn btn-warning" role="button">Cancel</a>
+        <a href="{% url 'instructors:topic_delete' topic.pk %}" class="btn btn-danger" style="float: right;">Delete</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-md-10">
+          <strong>Questions</strong>
+        </div>
+        <div class="col-md-2">
+          <strong>Answers</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-body">
+    <div class="list-group list-group-flush list-group-formset">
+      {% for question in questions %}
+        <div class="list-group-item">
+          <div class="row">
+            <div class="col-md-10">
+              <a href="{% url 'instructors:question_change' topic.pk question.pk %}">{{ question.text }}</a>
+            </div>
+            <div class="col-md-2">
+              {{ question.answers_count }}
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <div class="list-group-item text-center">
+          <p class="text-muted font-italic mb-0">You haven't created any questions yet. Go ahead and <a href="{% url 'instructors:question_add' topic.pk %}">Add the first question</a>.</p>
+        </div>
+      {% endfor %}
+    </div>
+
+      <a href="{% url 'instructors:question_add' topic.pk %}" class="btn btn-outline-primary btn-sm">Add question</a>
+    </div>
+  </div>
+  </div>
+{% endblock %}

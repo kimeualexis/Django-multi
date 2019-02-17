@@ -1,0 +1,79 @@
+{% extends 'codecat/_base.html' %}
+{% load crispy_forms_tags crispy_forms_filters %}
+
+{% block body %}
+ <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'instructors:topic_change_list' %}">My Topics</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'instructors:topic_change' topic.pk %}">{{ topic.name }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ question.text }}</li>
+    </ol>
+  </nav>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="mb-3">{{ question.text }}</h2>
+    </div>
+
+    <div class="panel-body">
+<form method="post" novalidate>
+    {% csrf_token %}
+    {{ formset.management_form }}
+    {{ form|crispy }}
+
+
+         <div class="row">
+             <br>
+             <br>
+          <div class="col-md-4">
+            <strong>Answers</strong>
+          </div>
+          <div class="col-md-4">
+            <strong>Correct?</strong>
+          </div>
+          <div class="col-md-4">
+            <strong>Delete?</strong>
+          </div>
+        </div>
+
+        <div class="list-group list-group-flush list-group-formset">
+        {% for form in formset %}
+          <div class="list-group-item">
+            <div class="row">
+              <div class="col-md-4">
+                {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+                {{ form.text|as_crispy_field }}
+                {% if form.instance.pk and form.text.value != form.instance.text %}<p class="mb-0 mt-1"><small class="text-muted font-italic"><strong>Old answer:</strong> {{ form.instance.text }}</small></p>{% endif %}
+              </div>
+              <div class="col-md-4">
+                {{ form.is_correct }}
+              </div>
+              <div class="col-md-4">
+                {% if form.instance.pk %}
+                  {{ form.DELETE }}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+          <small class="form-text text-muted">Your question may have at least <strong>2</strong> answers and maximum <strong>10</strong> answers. Select at least one correct answer.</small>
+    </p>
+        <div class="col-md-4">
+    <button type="submit" class="btn btn-success">Save</button>
+        </div>
+
+        <div class="col-md-4">
+    <a href="{% url 'instructors:topic_change' topic.pk %}" class="btn btn-warning" role="button">Cancel</a>
+        </div>
+
+        <div class="col-md-4">
+    <a href="{% url 'instructors:question_delete' topic.pk question.pk %}" class="btn btn-danger" style="float: right;">Delete</a>
+        </div>
+
+    </form>
+    </div>
+    </div>
+
+{% endblock %}

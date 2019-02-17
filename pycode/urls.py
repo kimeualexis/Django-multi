@@ -18,7 +18,7 @@ from django.contrib import admin
 from codecat.views import instructors, students, codecat
 
 urlpatterns = [
-	path(r'^admin/', admin.site.urls),
+	path('admin/', admin.site.urls),
 	path('', include('codecat.urls')),
 	path('accounts/', include('django.contrib.auth.urls')),
 	path('accounts/signup/', codecat.SignUpView.as_view(), name='signup'),

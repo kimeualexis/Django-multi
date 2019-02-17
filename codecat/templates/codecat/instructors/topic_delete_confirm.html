@@ -1,0 +1,21 @@
+{% extends 'codecat/_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block body %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'instructors:topic_change_list' %}">My Topics</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'instructors:topic_change' topic.pk %}">{{ topic.name }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Confirm deletion</li>
+    </ol>
+  </nav>
+
+<h2 class="mb-3">Confirm deletion</h2>
+  <p class="lead">Are you sure you want to delete the quiz <strong>"{{ topic.name }}"</strong>? </p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger btn-lg">Yes, I'm sure</button>
+    <a href="{% url 'instructors:topic_change' topic.pk %}" class="btn btn-outline-secondary btn-lg" role="button">Cancel</a>
+  </form>
+{% endblock %}

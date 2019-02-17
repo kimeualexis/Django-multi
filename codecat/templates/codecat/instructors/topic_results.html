@@ -1,0 +1,48 @@
+{% extends 'codecat/_base.html' %}
+
+{% load crispy_forms_tags humanize %}
+
+{% block body %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'instructors:topic_change_list' %}">My Topics</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'instructors:topic_change' topic.pk %}">{{ topic.name }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Results</li>
+    </ol>
+  </nav>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>{{ topic.name }} Results</h3>
+    </div>
+
+    <div class="panel-body">
+        <div class="page-header">
+            <h4 class="text-primary"><strong>Taken Topics</strong></h4>
+        </div>
+         <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Date</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for taken_topic in taken_topics %}
+          <tr>
+            <td>{{ taken_topic.student.user.username }}</td>
+            <td>{{ taken_topic.date|naturaltime }}</td>
+            <td>{{ taken_topic.score }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+
+    <div class="panel-footer text-muted">
+      Total respondents: <strong>{{ total_taken_topics }}</strong>
+    </div>
+
+</div>
+{% endblock %}

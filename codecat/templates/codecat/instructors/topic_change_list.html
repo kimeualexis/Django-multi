@@ -1,0 +1,47 @@
+{% extends 'codecat/_base.html' %}
+
+{% block body %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">My Topics</li>
+    </ol>
+  </nav>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <h2 class="mb-3">My Topics</h2>
+  </div>
+
+  <a href="{% url 'instructors:topic_add' %}" class="btn btn-outline-secondary mb-3" role="button">Add Topic</a>
+  <div class="panel-body">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Course</th>
+          <th>Questions</th>
+          <th>Taken</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for topic in topics %}
+          <tr>
+            <td class="align-middle"><a href="{% url 'instructors:topic_change' topic.pk %}">{{ topic.name }}</a></td>
+            <td class="align-middle">{{ topic.subject.get_html_badge }}</td>
+            <td class="align-middle">{{ topic.questions_count }}</td>
+            <td class="align-middle">{{ topic.taken_count }}</td>
+            <td class="text-right">
+              <a href="{% url 'instructors:topic_results' topic.pk %}" class="btn btn-outline-secondary">View results</a>
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td class="bg-light text-center font-italic" colspan="5">You haven't created any topic yet.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
