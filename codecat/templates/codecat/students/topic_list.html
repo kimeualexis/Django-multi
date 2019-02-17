@@ -1,0 +1,43 @@
+{% extends 'codecat/_base.html' %}
+
+
+{% block body %}
+{% include 'codecat/students/_header.html' with active='new' %}
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Course</th>
+          <th>Length</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      {% if topics %}
+        {% for topic in topics %}
+          <tr>
+            <td class="align-middle">{{ topic.name }}</td>
+            <td class="align-middle">{{ topic.course.get_html_badge }}</td>
+            <td class="align-middle">{{ topic.questions_count }} questions</td>
+            <td class="text-right">
+              <a href="{% url 'students:take_topic' topic.pk %}" class="btn btn-primary">Start Topic</a>
+            </td>
+          </tr>
+        {% endfor %}
+        {% else %}
+          <tr>
+            <td class="bg-light text-center font-italic" colspan="4">No topic matching your course right now.</td>
+          </tr>
+      {% endif %}
+
+      </tbody>
+    </table>
+    </div>
+</div>
+
+
+{% endblock %}

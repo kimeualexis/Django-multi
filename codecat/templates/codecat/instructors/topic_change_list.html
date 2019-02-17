@@ -28,7 +28,7 @@
         {% for topic in topics %}
           <tr>
             <td class="align-middle"><a href="{% url 'instructors:topic_change' topic.pk %}">{{ topic.name }}</a></td>
-            <td class="align-middle">{{ topic.subject.get_html_badge }}</td>
+            <td class="align-middle">{{ topic.course.get_html_badge }}</td>
             <td class="align-middle">{{ topic.questions_count }}</td>
             <td class="align-middle">{{ topic.taken_count }}</td>
             <td class="text-right">

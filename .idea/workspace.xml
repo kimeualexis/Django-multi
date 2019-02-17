@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08bd72d4-3fbc-4028-8172-79df4788c420" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/question_add_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/question_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_add_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_delete_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/question_delete_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/students/_header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/students/taken_topic_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/codecat/templates/codecat/students/topic_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codecat/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/codecat/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycode/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pycode/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pycode/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_delete_form.html">
+        <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/students/topic_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="899">
+              <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -74,7 +70,6 @@
         <option value="$PROJECT_DIR$/codecat/urls.py" />
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.py" />
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_list.html" />
-        <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.html" />
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_add_form.html" />
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/question_add_form.html" />
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/question_change_form.html" />
@@ -83,6 +78,13 @@
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_results.html" />
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_delete.html" />
         <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_delete_form.html" />
+        <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_delete_confirm.html" />
+        <option value="$PROJECT_DIR$/codecat/templates/codecat/students/taken_topic_list.html" />
+        <option value="$PROJECT_DIR$/codecat/templates/codecat/students/_header.html" />
+        <option value="$PROJECT_DIR$/codecat/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/question_delete_confirm.html" />
+        <option value="$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.html" />
+        <option value="$PROJECT_DIR$/codecat/templates/codecat/students/topic_list.html" />
       </list>
     </option>
   </component>
@@ -128,7 +130,20 @@
               <item name="codecat" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="codecat" type="462c0819:PsiDirectoryNode" />
-              <item name="instructors" type="462c0819:PsiDirectoryNode" />
+              <item name="students" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Djangomulti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Djangomulti" type="462c0819:PsiDirectoryNode" />
+              <item name="codecat" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Djangomulti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Djangomulti" type="462c0819:PsiDirectoryNode" />
+              <item name="codecat" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Djangomulti" type="b2602c69:ProjectViewProjectNode" />
@@ -185,22 +200,22 @@
       <workItem from="1550341764095" duration="6500000" />
       <workItem from="1550422151785" duration="61000" />
       <workItem from="1550422244930" duration="1360000" />
-      <workItem from="1550426092391" duration="4304000" />
+      <workItem from="1550426092391" duration="7465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16505000" />
+    <option name="totallyTimeSpent" value="19666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="28" width="1366" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13066465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12990937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -219,11 +234,11 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10649547" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12990937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -233,7 +248,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.057239056" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.48440066" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -257,13 +272,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/registration/signup.py" />
-    <entry file="file://$PROJECT_DIR$/codecat/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codecat/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2436">
@@ -311,26 +319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codecat/views/instructors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5742">
-          <caret line="198" column="36" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codecat/views/students.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1421">
-          <caret line="49" column="34" lean-forward="true" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/form_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -372,22 +360,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/_base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1421">
           <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_list.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_add_form.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -428,6 +406,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/students/taken_topic_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_delete_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="14" column="96" selection-start-line="14" selection-start-column="96" selection-end-line="14" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_list.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/question_delete_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="107" selection-start-line="14" selection-start-column="107" selection-end-line="14" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="e#493#500#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_results.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
@@ -435,10 +447,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_delete_form.html">
+    <entry file="file://$PROJECT_DIR$/codecat/views/instructors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="4950">
+          <caret line="198" column="36" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/views/students.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="57" column="43" lean-forward="true" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/instructors/topic_change_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/students/_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codecat/templates/codecat/students/topic_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
         </state>
       </provider>
     </entry>

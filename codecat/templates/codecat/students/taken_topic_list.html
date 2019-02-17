@@ -1,0 +1,32 @@
+{% extends 'codecat/_base.html' %}
+
+{% block body %}
+  {% include 'codecat/students/_header.html' with active='taken' %}
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Course</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for taken_topic in taken_topics %}
+          <tr>
+            <td>{{ taken_topic.topic.name }}</td>
+            <td>{{ taken_topic.topic.course.get_html_badge }}</td>
+            <td>{{ taken_topic.score }}</td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td class="bg-light text-center font-italic" colspan="3">You haven't completed any Topic yet.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+</div>
+
+{% endblock %}
