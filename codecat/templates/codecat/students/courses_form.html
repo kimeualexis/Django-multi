@@ -1,0 +1,18 @@
+{% extends 'codecat/_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+    <div class="panel panel-primary">
+    <div class="page-header">
+        <h2 class="mb-3 text-primary" style="margin: 10px;">Update your Course:</h2>
+    </div>
+    <div class="panel-body">
+   <form method="post" class="form-horizontal" novalidate style="margin: 15px;">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success">Update</button>
+    <a href="{% url 'students:topic_list' %}" class="btn btn-outline-danger">Cancel</a>
+  </form>
+    </div>
+    </div>
+{% endblock %}

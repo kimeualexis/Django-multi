@@ -3,19 +3,25 @@
 {% block body %}
   <div class="row">
     <div class="col-md-6 col-sm-10 col-12 col-md-offset-3">
-        <fieldset>
-            <div class="page-header">
-                <h2>Sign up: <b style="color: black;">{{ user_type }}</b></h2>
-            </div>
 
-      <form method="post" class="form-horizontal" novalidate>
+            <div class="panel panel-primary">
+            <div class="page-header">
+                <h2 style="padding-left: 15px;">Sign up: <b class="text-primary">{{ user_type }}</b></h2>
+            </div>
+      <div class="panel-body">
+      <form method="post" class="form-horizontal" novalidate style="margin: 15px;">
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ next }}">
         {% include 'codecat/form_template.html' %}
+          <div class="form-group">
         <button type="submit" class="btn btn-success">Sign up</button>
+          </div>
       </form>
-            </fieldset>
+      </div>
+            </div>
+
         </div>
+
       </div>
 
 

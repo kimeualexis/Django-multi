@@ -38,7 +38,7 @@ class Question(models.Model):
 	text = models.TextField()
 
 	def __str__(self):
-		return self.question
+		return self.text
 
 
 class Answer(models.Model):
